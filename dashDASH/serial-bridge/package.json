@@ -1,0 +1,15 @@
+{
+  "name": "pulseguard-serial-bridge",
+  "version": "1.0.0",
+  "private": true,
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "list-ports": "node -e \"require('serialport').SerialPort.list().then(ports => console.log(JSON.stringify(ports, null, 2)))\""
+  },
+  "dependencies": {
+    "@serialport/parser-readline": "^13.0.0",
+    "serialport": "^13.0.0",
+    "ws": "^8.18.0"
+  }
+}
